@@ -1,0 +1,208 @@
+package com.infosys.com;
+
+public class OccuranceOfChar {
+
+	public static void main(String[] args) {
+		System.out.println("Find Occurance of word in a String");
+		int a[] = new int[26];
+		String str = "Satyendra Kumar";
+		int s1 = str.length();
+		for (int i = 0; i < s1; i++) {
+			if (str.charAt(i) >= 65 && str.charAt(i) <= 90) {
+				a[str.charAt(i) - 65]++;
+			} else if (str.charAt(i) >= 97 && str.charAt(i) <= 122) {
+				a[str.charAt(i) - 97]++;
+			}
+
+		}
+		for (int i = 0; i < 26; i++) {
+			if (a[i] > 0)
+				System.out.println((char) (i + 65) + " " + a[i]);
+		}
+
+	}
+
+}
+--------------
+package com.infosys.com;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Occurance {
+	public static void main(String[] args) {
+		List<String> list = Arrays.asList("1", "1", "1", "1", "1", "1", "1",
+				"1", "5", "5", "12", "12", "12", "12", "12", "12", "1", "1",
+				"8");
+		int max = 0;
+		int curr = 0;
+		String currKey = null;
+		Set<String> unique = new HashSet<String>(list);
+		for (String key : unique) {
+			curr = Collections.frequency(list, key);
+			if (max < curr) {
+				max = curr;
+				currKey = key;
+
+			}
+		}
+		System.out.println("The Number: " + currKey + " happens " + max
+				+ " times ");
+
+	}
+}
+
+--------------
+package com.infosys.com;
+
+import java.util.Scanner;
+
+public class StringReverse {
+	public static void main(String[] args) {
+		String original, reverse = "";
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no to be reverse");
+		original = sc.nextLine();
+		int str = original.length();
+		for (int i = str - 1; i >= 0; i--) {
+			reverse = reverse + original.charAt(i);
+
+		}
+		System.out.println(reverse);
+	}
+}
+
+---------------
+package com.infosys.com;
+
+import java.util.Scanner;
+
+public class IntReverse {
+	public static void main(String[] args) {
+	 //   reverse a integer no
+				int n,reverse=0;
+				Scanner scanner=new Scanner(System.in);
+				System.out.println("Enter the no.");
+				n=scanner.nextInt();
+				
+				while(n!=0){
+					reverse=reverse*10;
+					reverse=reverse+n%10;
+					n=n/10;
+				}
+				System.out.println(reverse);
+		}
+	}
+-----------------
+package com.infosys.com;
+
+import java.util.Scanner;
+
+public class Factorial {
+public static void main(String[] args) {
+//pgm1
+	
+	//Factorial program using recursive method
+	/*int num;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the no.");
+	num=sc.nextInt();
+	int factorial=fact(num);
+System.out.println(factorial);
+}
+
+private static int fact(int num) {
+	int output;
+	if(num==1){
+		return 1;
+	}
+	output=fact(num-1)*num;
+	return output;*/
+	
+//pgm2
+	//factorial program without using recursion method
+	int i,fact=1;
+	int number=5;
+	for (int j = 1; j <=number; j++) {
+		fact=fact*j;
+	}
+	System.out.println(fact);
+}
+
+}
+----------------
+
+package com.infosys.com;
+
+import java.util.Scanner;
+
+public class Fabonaccy {
+	public static void main(String[] args) {
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter then no..");
+		num = sc.nextInt();
+		long array[] = new long[num];
+		array[0] = 0;
+		array[1] = 1;
+		for (int i = 2; i < num; i++) {
+			array[i] = array[i - 1] + array[i - 2];
+
+		}
+		for (int i = 0; i < num; i++) {
+			System.out.println(array[i]);
+
+		}
+	}
+}
+------------
+package com.infosys.com;
+
+import java.util.Scanner;
+
+public class Armstring {
+	public static void main(String[] args) {
+		int c = 0, a, temp,n;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no");
+		n = sc.nextInt();
+		temp = n;
+		while (n > 0) {
+			a = n % 10;
+			n = n / 10;
+			c = c + (a * a * a);
+		}
+		if (temp == c) {
+			System.out.println("Armstrong");
+		} else {
+			System.out.println("Not Armstrong");
+		}
+	}
+}
+-----------
+package com.mumbai.com;
+
+public class cap {
+public static void main(String[] args) {
+	String s1="ABC";
+	String s2=new String(s1);
+	String s3="ABC";
+	String s4=new String("ABC");
+	String s5=s1;
+	System.out.println(s1.equals(s2));//True
+	System.out.println(s1==s2);//False
+	System.out.println(s1.equals(s3));//True
+	System.out.println(s1==s2);//False
+	System.out.println(s1.equals(s4));//True
+	System.out.println(s1==s4);//False
+	System.out.println(s2.equals(s4));//True
+	System.out.println(s2==s4);//False
+	System.out.println(s1.equals(s5)); //True
+	System.out.println(s1==s5); //True
+
+}
+}
+--------------

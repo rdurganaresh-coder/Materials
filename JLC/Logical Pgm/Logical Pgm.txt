@@ -1,0 +1,340 @@
+1) Fibonaccy pgm
+------------------
+public class Fabonaccy {
+
+	public static void main(String[] args) {
+
+
+
+		Scanner sc = new Scanner(System.in);
+		int limit;
+		System.out.println("Enter the no:");
+		limit = sc.nextInt();
+		
+		long sat[]=new long[limit];
+		sat[0]=0;
+		sat[1]=1;
+		for (int i = 2; i < limit; i++) {
+			sat[i]=sat[i-1]+sat[i-2];
+		}
+		System.out.println("Limit of no.: "+limit);
+		for (int i = 0; i < limit; i++) {
+			System.out.println(sat[i]);
+			
+		}
+	
+2) Again same fibonaccy Series pgm
+---------------------------------
+		// regenerated Fibonaccy series
+		// first set the limit length
+
+		int lim = 20;
+		// Create the arrays and store in limit in that int
+		long ABC[]=new long[lim];
+		// insert default value in arrays that is o and 1
+		ABC[0] = 0;
+		ABC[1] = 1;
+		for (int i = 2; i < lim; i++) {
+			ABC[i] = ABC[i - 1] + ABC[i - 2];
+		}
+		// create int he fibonaccy series and store in a arrays
+		System.out.println("limit of no: \t" + lim);
+		for (int i = 0; i < lim; i++) {
+			System.out.println(ABC[i]);
+		}
+
+3) Factorial pgm using recursin method
+--------------------------------------
+	public class Reversepgm {
+
+	public static void main(String[] args) {
+	 Scanner scanner = new Scanner(System.in);
+
+	      System.out.println("Enter the number:");
+
+	      //Stored the entered value in variable
+
+	      int num = scanner.nextInt();
+	      //Called the user defined function fact
+
+	      int factorial = fact(num);
+	      System.out.println("Factorial of entered number is: "+factorial);
+	   }
+	   static int fact(int n)
+	   {
+	       int output;
+	       if(n==1){
+	         return 1;
+	       }
+	       //Recursion: Function calling itself
+	       output = fact(n-1)* n;
+	       return output;
+		   }
+		  }
+
+4) Factorial pgm without using recursin method
+----------------------------------------------
+	public class FactTest {
+
+	public static void main(String[] args) {
+	factorial pgm without using recursion 
+		/*int i,fact=1;
+		int number=5;
+		for (int j = 1; j <= number; j++) {
+			fact=fact*j;
+		}
+		System.out.println(fact);
+		}
+		}
+5) String Reverse Pgm
+----------------------
+	public class Reverse {
+
+	public static void main(String[] args) {
+
+	String s1="SATYENDRA";
+		int length1=s1.length();
+		for (int i = length1-1; i >=0; i--) {
+			System.out.print(s1.charAt(i));
+		}
+		}
+6) String Reverse Pgm User input
+----------------------
+	public class Reverse {
+
+	public static void main(String[] args) {
+	String original,reverse="";
+		Scanner in= new Scanner(System.in);
+		System.out.println("Enter String.");
+		original=in.nextLine();
+		
+		int length=original.length();
+		for (int i = length-1; i >=0; i--) 
+			reverse=reverse+original.charAt(i);
+			System.out.println(reverse);
+			}
+			}
+
+ 7) Reverse a integer no
+ -----------------------
+	public class Reverse {
+	public static void main(String[] args) {
+    reverse a integer no
+			int n,reverse=0;
+			Scanner scanner=new Scanner(System.in);
+			System.out.println("Enter the no.");
+			n=scanner.nextInt();
+			
+			while(n!=0){
+				reverse=reverse*10;
+				reverse=reverse+n%10;
+				n=n/10;
+			}
+			System.out.println(reverse);
+			}
+			}
+			
+8) Reverse a Integer No.
+------------------------
+	public class Reverse {
+
+	public static void main(String[] args) {
+	reverse a integer no
+			/*int n,reverse=0;
+			Scanner scanner=new Scanner(System.in);
+			System.out.println("Enter the no.");
+			n=scanner.nextInt();
+			
+			while(n!=0){
+				reverse=reverse*10;
+				reverse=reverse+n%10;
+				n=n/10;
+			}
+			System.out.println(reverse);
+			}
+			}
+9)Singleton pgm
+---------------
+	public class SingletonTest {
+
+	private static SingletonTest obj = new SingletonTest();
+
+	private SingletonTest() {
+	}
+
+	private static SingletonTest getInstance() {
+		return obj;
+	}
+
+	public void Test() {
+		System.out.println("Instance Creation");
+	}
+
+	public static void main(String[] args) {
+		SingletonTest st = getInstance();
+		st.Test();
+		st.Test();
+		st.Test();
+	}
+}
+
+10) Immutable class pgm
+-----------------------
+	public final class Employee{  
+	final String pancardNumber;  
+	  
+	public Employee(String pancardNumber){  
+	this.pancardNumber=pancardNumber;  
+	}  
+	  
+	public String getPancardNumber(){  
+	return pancardNumber;  
+	}  	  
+	}  
+
+11) Swaping Pgm
+--------------
+	public class Swaping {
+
+	public static void main(String[] args) {
+// pgm1) Swaping two no.
+		/*int num1 = 10;
+		int num2 = 20;
+		System.out.println("Before Swaping");
+		System.out.println(num1);
+		System.out.println(num2);
+
+		swap(num1, num2);
+
+	}
+
+	private static void swap(int num1, int num2) {
+		int temp = num1;
+		num1 = num2;
+		num2 = temp;
+		System.out.println("After swaping");
+		System.out.println(num1);
+		System.out.println(num2);*/
+	}
+	
+12) palindrom pgm
+------------------
+	public class Pali {
+
+	public static void main(String[] args) {
+	int array[]=new int[]{121,111,222,345,1234,1245,1234};
+		for (int i = 0; i < array.length; i++) {
+			int number=array[i];
+			int reverseNumber=0;
+			int temp=0;
+			
+			while(number>0){
+				temp=number%10;
+				number=number/10;
+				reverseNumber=reverseNumber*10+temp;
+			} 
+			if(array[i]==reverseNumber){
+				System.out.println(array[i]+"is Palindrom");
+			}else{
+				System.out.println(array[i]+"NOT pali");
+			}
+		}
+13) Swaping no without using 3rd variable
+-----------------------------------------
+	public class Swap {
+
+	public static void main(String[] args) {
+		int num1=100;
+		int num2=200;
+		System.out.println("Before");
+		System.out.println(num1);
+		System.out.println(num2);
+		System.out.println("After");
+		
+		num1=num1+num2;
+		num2=num1-num2;
+		num1=num1-num2;
+		System.out.println("After");
+		System.out.println(num1);
+		System.out.println(num2);
+		}
+		}
+14) Swaping No using 3rd Variable
+---------------------------------
+	public class Swap {
+
+	public static void main(String[] args) {
+	swap suign 3rd variable
+		
+		int no1=10;
+		int no2=20;
+		System.out.println("Before");
+		System.out.println(no1);
+		System.out.println(no2);		
+		swap(no1,no2);		
+	}
+	private static void swap(int no1, int no2) {
+		int temp=no1;
+		no1=no2;
+		no2=temp;
+		System.out.println("After");
+		System.out.println(no1);
+		System.out.println(no2);
+		
+	}
+
+}
+
+14)Removing Dublicate value from aray list
+------------------------------------------
+	public class RemoveDuplicateValieFromArrays {
+	private static int[] removeDublicate(int[] input) {
+		int j = 0;
+		int i = 1;
+		// return the arrays if length is less than 2
+		if (input.length < 2) {
+			return input;
+		}
+		while (i < input.length) {
+			if (input[i] == input[j]) {
+				i++;
+			} else {
+				input[++j] = input[i++];
+			}
+		}
+		int output[]=new int[j+1];
+		for (int k = 0; k < output.length; k++) {
+			output[k]=input[k];
+		}
+		return output;
+	}
+
+	public static void main(String[] args) {
+
+		int input1[] = new int[] { 2, 3, 6, 6, 8, 9, 10, 10, 10, 12, 12 };
+		int output[] = removeDublicate(input1);
+		for(int i:output){
+			System.out.println(i+" ");
+		}
+	}
+
+}
+16) ArmstrongNumber pgm
+-----------------------
+	public class ArmstrongNumber {
+	public static void main(String[] args) {
+	int c=0,a,temp;
+	int n=153;//this no is armstrong or not to check
+	temp=n;
+	while(n>0){
+		a=n%10;
+		n=n/10;
+		c=c+(a*a*a);
+	}
+	if(temp==c){
+		System.out.println("this is Aramstrong number");
+	}else{
+		System.out.println("this is not a Aramstring number");
+	
+	}
+	}
